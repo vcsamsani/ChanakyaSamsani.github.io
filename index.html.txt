@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanakya Samsani - Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a> |
+        <a href="#">About Me</a> |
+        <a href="#">Work</a> |
+        <a href="#">Projects</a> |
+        <a href="#">Resume</a> |
+        <a href="#">Contact Me</a>
+    </div>
+    <div class="container">
+        <div class="profile-pic">
+            <img src="https://source.unsplash.com/random/250x250" alt="Chanakya Samsani">
+        </div>
+        <div class="intro">
+            <p>Hi There!, I'm</p>
+            <h1>Chanakya</h1>
+            <p>Chaa - nakh - kya</p>
+            <p class="title">
+                <span style="animation-delay: 0s;">Data Scientist</span>
+                <span style="animation-delay: 4s;">Analyst</span>
+                <span style="animation-delay: 8s;">Engineer</span>
+                <span style="animation-delay: 12s;">Artist</span>
+                <span style="animation-delay: 16s;">A Son</span>
+                <span style="animation-delay: 20s;">A Brother</span>
+                <span style="animation-delay: 24s;">A Friend</span>
+            </p>
+        </div>
+    </div>
+    <script>
+        let titles = document.querySelectorAll(".title span");
+        let index = 0;
+        function showNextTitle() {
+            titles.forEach(t => t.style.display = "none");
+            titles[index].style.display = "block";
+            index = (index + 1) % titles.length;
+            setTimeout(showNextTitle, 4000);
+        }
+        showNextTitle();
+    </script>
+</body>
+</html>
